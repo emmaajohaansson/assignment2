@@ -14,11 +14,12 @@ class ProductsController extends BaseController
   public function showProducts() {
     $results = DB::select('select * from products');
     return $results;
-    //return view('games', ['result' => $results]);
+    //return view('products', ['result' => $results]);
   }
 
-  public function showOneProduct() {
-
+  public function showOneProduct($id) {
+    $results = DB::select('select * from products where products.id = ?', [$id]);
+    return $results;
   }
 
   public function createProduct() {
