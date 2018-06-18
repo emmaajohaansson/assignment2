@@ -14,3 +14,13 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/products', 'ProductsController@showProducts');
+
+$router->get('/products/{id}', 'ProductsController@showOneProduct');
+
+$router->post('/products', 'ProductsController@createProduct');
+
+$router->get('/stores', 'ProductsController@showStores');
+
+$router->get('/reviews', 'ProductsController@showReviews');
