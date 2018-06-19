@@ -8,11 +8,12 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Review;
 
 class ReviewsController extends BaseController
 {
   public function showReviews() {
-    $results = DB::select('select * from reviews');
-    return $results;
+    $reviews = Review::all();
+    return $reviews;
   }
 }
