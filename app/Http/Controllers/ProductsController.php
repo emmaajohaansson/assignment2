@@ -22,7 +22,11 @@ class ProductsController extends BaseController
     return $results;
   }
 
-  public function createProduct() {
-
+  public function createProduct(Request $request) {
+    //$prodName = $request->input('title');
+    //$prodBrand = $request->input('brand');
+    //$prodImg = $request->input('image');
+    //$prodDesc = $request->input('description');
+    //$prodPrice = $request->input('price');
   }
 }

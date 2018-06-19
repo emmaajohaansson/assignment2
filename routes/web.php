@@ -21,6 +21,6 @@ $router->get('/products/{id}', 'ProductsController@showOneProduct');
 
 $router->post('/products', 'ProductsController@createProduct');
 
-$router->get('/stores', 'ProductsController@showStores');
+$router->get('/stores', 'StoresController@showStores');
 
-$router->get('/reviews', 'ProductsController@showReviews');
+$router->get('/reviews', 'ReviewsController@showReviews');
