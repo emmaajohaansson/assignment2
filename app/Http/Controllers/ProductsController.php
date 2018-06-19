@@ -23,5 +23,12 @@ class ProductsController extends BaseController
   }
 
   public function createProduct(Request $request) {
+    $product = new Product;
+    $product->title = $request->title;
+    $product->brand = $request->brand;
+    $product->image = $request->image;
+    $product->description = $request->description;
+    $product->price = $request->price;
+    $product->save();
   }
 }
