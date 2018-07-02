@@ -12,6 +12,7 @@ use App\Review;
 
 class ReviewsController extends BaseController
 {
+  //Show all reviews
   public function showReviews() {
     $reviews = Review::all();
     return $reviews;

@@ -15,10 +15,8 @@ class CreateProductStoreTable extends Migration
     {
         Schema::create('product_store', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->unsignedInteger('store_id');
-            $table->foreign('store_id')->references('id')->on('stores');
+            $table->integer('product_id');
+            $table->integer('store_id');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

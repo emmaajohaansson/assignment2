@@ -12,6 +12,7 @@ use App\Store;
 
 class StoresController extends BaseController
 {
+  //Show all stores
   public function showStores() {
     $stores = Store::all();
     return $stores;
